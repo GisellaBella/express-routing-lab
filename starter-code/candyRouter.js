@@ -13,16 +13,14 @@ res.json(candy);
 res.send(candy); 
 });
 
-//show (i could not figure this one out.)
+//show 
 router.get('/id:', function(req, res) {
 var candyToShow = req.params.id;
 	for (var i = 0 ; i<candy.length; i++) {
-	 if ( candyToShow == candy[i].id){
-	return candy[i].id;
-	}		
+	if ( candy[i].id==candyToShow){
+	res.json(candy[i]);
+		}		
 }	
-res.json(candy);
-res.send(candy); 
 });
 
 
